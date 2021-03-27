@@ -1,22 +1,21 @@
-package com.one.innovation.digital.heroesapi.document;
+package com.one.innovation.digital.heroesapi.model;
 
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBHashKey;
-import lombok.Getter;
-import lombok.Setter;
-import org.springframework.data.annotation.Id;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;
 
+import lombok.Getter;
+import lombok.Setter;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import org.springframework.data.annotation.Id;
 
 @Data
 @Getter
 @Setter
 @NoArgsConstructor
-
 @DynamoDBTable(tableName ="Heroes_Table")
-
 public class Heroes {
 
     /** @DynamoDBHashKey e @DynamoDBAtrribute indicam ao banco qual será o nome das colunas
