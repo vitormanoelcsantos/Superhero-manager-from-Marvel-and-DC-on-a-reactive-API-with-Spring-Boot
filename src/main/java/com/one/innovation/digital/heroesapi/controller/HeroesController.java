@@ -60,4 +60,9 @@ public class HeroesController {
         log.info("Deleting the hero with id {}", id);
         return Mono.just(HttpStatus.NOT_FOUND);
     }
+
+    @PutMapping(HEROES_ENDPOINT_LOCAL + "/{id}")
+    public Mono<Heroes> updateHeroById(@PathVariable String id, @RequestBody Heroes heroes){
+        return heroesService.updateAHeroById(id, heroes);
+    }
 }

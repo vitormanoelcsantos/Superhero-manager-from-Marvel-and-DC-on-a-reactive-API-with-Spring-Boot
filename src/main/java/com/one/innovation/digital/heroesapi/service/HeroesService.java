@@ -35,8 +35,8 @@ public class HeroesService {
         return Mono.just(true);
     }
 
-//    public Mono<Heroes> updateAHeroById(String id, Heroes heroes){
-//        heroes.setId(id);
-//        return Mono.justOrEmpty(this.heroesRepository.save(heroes));
-//    }
+    public Mono<Heroes> updateAHeroById(String id, Heroes heroes){
+        heroes.setId(id);
+        return Mono.justOrEmpty(this.heroesRepository.save(heroes));
+    }
 }
